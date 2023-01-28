@@ -17,6 +17,38 @@
  14.Single post                                  
  15.Footer    
 -------------------------------------------------*/
+/* Hayat----------------- */
+
+.location{
+    width: 100%;
+    height: 70vh;
+}
+
+#button-img2{
+    border: 0px;
+    border-radius: 5px;
+}
+
+.buy-it {
+    padding: 0px 0px !important;
+}
+.get-free {
+    padding: 0px 0px !important;
+}
+
+#button-img{
+    height: 48px;
+    width: 160px;
+}
+
+
+#client-section {
+    background: url('../images/partners-bg.jpg') center top no-repeat !important;
+    background-size: 100% !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
 
 /* Slider height width ----------------------- */
 
@@ -32,8 +64,6 @@
 
 /* Slider height width ----------------------- */
 
-/* Hayat----------------- */
-
 body{
     background-color: #F5F5F5;
 }
@@ -45,14 +75,11 @@ body{
 }
 
 
-/* App Section----------------- */
+
 /*-------------------------------------------------------*/
 /* 1. Isotope filtering
 /*-------------------------------------------------------*/
 
-/* header{
-    margin-bottom: 20px;
-} */
 .isotope-item {
     z-index: 2;
 }
@@ -693,7 +720,7 @@ a.button-second:hover {
     margin-right: 120px;
     background: #fbfbfb;
     padding: 22px 20px;
-    min-height: 130px;
+    min-height: 80px;
     transition: all 0.17s ease-in-out;
     -moz-transition: all 0.17s ease-in-out;
     -webkit-transition: all 0.17s ease-in-out;
@@ -1021,8 +1048,6 @@ button.mfp-arrow {
     background: #fbfbfb;
 }
 
-#slider {}
-
 ul.bxslider {
     padding: 0;
     margin: 0;
@@ -1323,7 +1348,7 @@ ul.bxslider ul li a img {
 /*-------------------------------------------------*/
 /* =  contact section
 /*-------------------------------------------------*/
-
+foote
 #contact-section {
     position: relative;
     min-height: 882px;
@@ -1337,7 +1362,8 @@ ul.bxslider ul li a img {
 
 .contact-box {
     padding: 40px 0;
-    background: rgba(70, 87, 101, 0.9);
+    /* background: rgba(70, 87, 101, 0.9); */
+    background: var(--bars-panel);
     position: relative;
     z-index: 2;
 }
@@ -2066,6 +2092,7 @@ ul.depth {
 
 footer {
     padding: 30px 0;
+    background: var(--bars-panel);
     border-top: 3px solid #f4f4f4;
 }
 
@@ -2074,6 +2101,7 @@ footer a.footer-logo {
 }
 
 .copyright-line {
+
     text-align: right;
     padding-top: 6px;
 }
@@ -2081,7 +2109,7 @@ footer a.footer-logo {
 .copyright-line span {
     display: inline-block;
     margin-right: 20px;
-    color: #535353;
+    color: #ffffff;
     font-size: 12px;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
