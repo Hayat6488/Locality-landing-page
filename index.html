@@ -27,6 +27,10 @@
 
 	<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -38,7 +42,7 @@
 		    ================================================== -->
 		<header class="clearfix">
 			<!-- Static navbar -->
-			<div class="navbar navbar-default navbar-static-top">
+			<div class="navbar navbar-default navbar-fixed-top">
 				<div class="container">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -47,7 +51,12 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="#"><img alt="" src="images/fotor_2023-1-28_19_16_13.png"> <span class="nav-title">LOCALITY</span></a>
+						<a class="navbar-brand" href="#">
+							<div class="nav-logo">
+								<img id="nav-logo" alt="" src="images/fotor_2023-1-28_13_18_48.png"> <span
+									class="nav-title">LOCALITY</span>
+							</div>
+						</a>
 					</div>
 					<div class="navbar-collapse collapse">
 						<ul class="nav navbar-nav navbar-right">
@@ -73,7 +82,7 @@
 		</header>
 		<!-- End Header -->
 
-		<section>
+		<section class="slider-lg">
 			<div class="accordion-slider" id="my-accordion">
 				<div class="as-panels">
 					<!-- Panel 1 -->
@@ -94,6 +103,35 @@
 					</div>
 					<div class="as-panel">
 						<img class="as-background" src="images/slider/7.jpeg" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="slider-sm">
+			<div id="slider">
+				<!--
+				#################################
+					- THEMEPUNCH BANNER -
+				#################################
+				-->
+				<div class="tp-banner-container">
+					<div class="tp-banner hayat">
+						<ul>
+							<li data-transition="3dcurtain-horizontal" data-slotamount="7" data-masterspeed="500">
+								<img src="images/slider/1.jpeg" alt="slidebg1" data-bgfit="cover"
+									data-bgposition="left top" data-bgrepeat="no-repeat">
+							</li>
+							<li data-transition="3dcurtain-horizontal" data-slotamount="7" data-masterspeed="500">
+								<img src="images/slider/2.jpeg" alt="slidebg1" data-bgfit="cover"
+									data-bgposition="left top" data-bgrepeat="no-repeat">
+							</li>
+							<li data-transition="3dcurtain-horizontal" data-slotamount="7" data-masterspeed="500">
+								<img src="images/slider/3.jpeg" alt="slidebg1" data-bgfit="cover"
+									data-bgposition="left top" data-bgrepeat="no-repeat">
+							</li>
+						</ul>
+						<div class="tp-bannertimer"></div>
 					</div>
 				</div>
 			</div>
@@ -146,33 +184,6 @@
 						</div>
 					</div>
 				</div>
-
-				<div id="slider">
-					<!--
-					#################################
-						- THEMEPUNCH BANNER -
-					#################################
-					-->
-					<!-- <div class="tp-banner-container">
-						<div class="tp-banner">
-							<ul> 
-								<li data-transition="3dcurtain-horizontal" data-slotamount="7" data-masterspeed="500">
-									<img src="images/slider/1.jpeg" alt="slidebg1" data-bgfit="cover"
-										data-bgposition="left top" data-bgrepeat="no-repeat">
-								</li>
-								<li data-transition="3dcurtain-horizontal" data-slotamount="7" data-masterspeed="500">
-									<img src="images/slider/2.jpeg" alt="slidebg1" data-bgfit="cover"
-										data-bgposition="left top" data-bgrepeat="no-repeat">
-								</li>
-								<li data-transition="3dcurtain-horizontal" data-slotamount="7" data-masterspeed="500">
-									<img src="images/slider/3.jpeg" alt="slidebg1" data-bgfit="cover"
-										data-bgposition="left top" data-bgrepeat="no-repeat">
-								</li>
-							</ul>
-							<div class="tp-bannertimer"></div>
-						</div>
-					</div> -->
-				</div>
 			</div>
 		</div>
 		<!-- End services -->
@@ -187,8 +198,11 @@
 							<div class="features-post triggerAnimation animated" data-animate="fadeInLeft">
 								<h1>DOWNLOAD LOCALITY</h1>
 								<p>from Google play store and Apple app store</p>
-								<a class="buy-it" href="#"><img id="button-img" src="images/get-it-on-google-play-logo-removebg-preview.png" alt=""></a>
-								<a class="get-free" href="#"><img id="button-img2" src="images/png-clipart-app-store-apple-google-play-iphone-mid-autumn-lantern-text-logo__1_-removebg-preview (9).png" alt=""></a>
+								<a class="buy-it" href="#"><img id="button-img"
+										src="images/get-it-on-google-play-logo-removebg-preview.png" alt=""></a>
+								<a class="get-free" href="#"><img id="button-img2"
+										src="images/png-clipart-app-store-apple-google-play-iphone-mid-autumn-lantern-text-logo__1_-removebg-preview (9).png"
+										alt=""></a>
 							</div>
 						</div>
 						<div class="col-md-6">
@@ -722,9 +736,12 @@
 		</div>
 
 		<!-- Maps ================================================ -->
-		
+
 		<div>
-			<iframe  class="location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d308.57652192737123!2d-52.70436451828022!3d47.56700151389478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b0ca3b8dfb612b7%3A0x358bb9e9c16a9600!2sSt%20Johns%20Ln%2C%20St.%20John&#39;s%2C%20NL%2C%20Canada!5e0!3m2!1sen!2sbd!4v1674909879877!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			<iframe class="location"
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d308.57652192737123!2d-52.70436451828022!3d47.56700151389478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b0ca3b8dfb612b7%3A0x358bb9e9c16a9600!2sSt%20Johns%20Ln%2C%20St.%20John&#39;s%2C%20NL%2C%20Canada!5e0!3m2!1sen!2sbd!4v1674909879877!5m2!1sen!2sbd"
+				width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+				referrerpolicy="no-referrer-when-downgrade"></iframe>
 		</div>
 
 
@@ -784,7 +801,7 @@
 
 			revapi = jQuery('.tp-banner').revolution(
 				{
-					delay: 8000,
+					delay: 4000,
 					startwidth: 994,
 					startheight: 666,
 					hideThumbs: 10,
@@ -797,7 +814,6 @@
 				});
 
 		});	//ready
-
 	</script>
 
 	<script type="text/javascript">
@@ -806,7 +822,25 @@
 				width: '100vw',
 				height: '75vh',
 				autoplay: true
+			});
 		});
+	</script>
+
+	<script>
+		$(document).ready(function () {
+			// This will execute whenever the window is resized
+			var width = $(window).width(); // New width
+			$(".hayat").height(width);
+			$(".tp-bgimg").height(width);
+			$(".slotslide div").height(width);
+		});
+
+		$(window).resize(function () {
+			// This will execute whenever the window is resized
+			var width = $(window).width(); // New width
+			$(".hayat").height(width);
+			$(".tp-bgimg").height(width);
+			$(".slotslide div").height(width);
 		});
 	</script>
 

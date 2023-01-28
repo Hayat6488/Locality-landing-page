@@ -19,6 +19,11 @@
 -------------------------------------------------*/
 /* Hayat----------------- */
 
+#nav-logo{
+    width: 38px;
+    height: 38px;
+}
+
 .location{
     width: 100%;
     height: 70vh;
@@ -53,19 +58,22 @@
 /* Slider height width ----------------------- */
 
 .tp-bgimg {
-    background-size: contain !important;
+    background-size: cover !important;
     background-position: center center !important;
+    /* height: 360px !important; */
 }
 
-.slotslide div {
-    background-size: contain !important;
+/* .slotslide div {
+    background-size: cover !important;
     background-position: center center !important;
-}
+} */
+
 
 /* Slider height width ----------------------- */
 
 body{
     background-color: #F5F5F5;
+    font-family: 'Roboto', sans-serif;
 }
 
 :root {
@@ -2090,9 +2098,16 @@ ul.depth {
 /* =  footer
 /*-------------------------------------------------*/
 
+.nav-logo{
+    display: flex;
+    align-items: center;
+}
+
 .nav-title{
     color: #ffffff;
     font-size: 24px;
+    font-weight: 700;
+    margin-left: 4px;
 }
 
 footer {
@@ -2156,4 +2171,44 @@ footer a.footer-logo {
     color: #fff;
     line-height: 32px;
     font-size: 16px;
+}
+
+@media screen and (max-width: 576px){
+.slider-lg{
+    display: none;
+}
+.slider-sm{
+    margin-top: 86px;
+}
+.slot{
+    height: 46px !important;
+}
+
+.slot .slotslide{
+    height: 46px !important;
+}
+}
+
+@media only screen and (min-width: 577px) and (max-width: 992px){
+.slider-lg{
+    display: none;
+}
+.slider-sm{
+    margin-top: 86px;
+}
+.slot{
+    height: 46px !important;
+}
+
+.slot .slotslide{
+    height: 46px !important;
+}
+}
+
+
+
+@media screen and (min-width: 993px){
+    .slider-sm{
+        display: none;
+    }
 }

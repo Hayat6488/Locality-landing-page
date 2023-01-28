@@ -3,7 +3,7 @@
 
 var $ = jQuery.noConflict();
 
-$(document).ready(function($) {
+$(document).ready(function ($) {
 	"use strict";
 
 	/*-------------------------------------------------*/
@@ -16,7 +16,7 @@ $(document).ready(function($) {
 		SliderPost.flexslider({
 			animation: "fade"
 		});
-	} catch(err) {
+	} catch (err) {
 
 	}
 
@@ -25,90 +25,90 @@ $(document).ready(function($) {
 	/*-------------------------------------------------*/
 
 	var winDow = $(window);
-		// Needed variables
-		var $container=$('.portfolio-container');
-		var $filter=$('.filter');
+	// Needed variables
+	var $container = $('.portfolio-container');
+	var $filter = $('.filter');
 
-		try{
-			$container.imagesLoaded( function(){
-				$container.show();
-				$container.isotope({
-					masonry: {
-						columnWidth: 1,
-						isAnimated: true,
-						itemSelector: '.blog-post'
-					},
-					filter:'*',
-					layoutMode:'masonry',
-					animationOptions:{
-						duration:750,
-						easing:'linear'
-					}
-				});
-
-
-				$('.triggerAnimation').waypoint(function() {
-					var animation = $(this).attr('data-animate');
-					$(this).css('opacity', '');
-					$(this).addClass("animated " + animation);
-
+	try {
+		$container.imagesLoaded(function () {
+			$container.show();
+			$container.isotope({
+				masonry: {
+					columnWidth: 1,
+					isAnimated: true,
+					itemSelector: '.blog-post'
 				},
-					{
-						offset: '80%',
-						triggerOnce: true
-					}
-				);
-
+				filter: '*',
+				layoutMode: 'masonry',
+				animationOptions: {
+					duration: 750,
+					easing: 'linear'
+				}
 			});
-		} catch(err) {
+
+
+			$('.triggerAnimation').waypoint(function () {
+				var animation = $(this).attr('data-animate');
+				$(this).css('opacity', '');
+				$(this).addClass("animated " + animation);
+
+			},
+				{
+					offset: '80%',
+					triggerOnce: true
+				}
+			);
+
+		});
+	} catch (err) {
+	}
+
+	winDow.bind('resize', function () {
+		var selector = $filter.find('a.active').attr('data-filter');
+
+		try {
+			$container.isotope({
+				filter: selector,
+				animationOptions: {
+					duration: 750,
+					easing: 'linear',
+					queue: false,
+				}
+			});
+		} catch (err) {
 		}
+		return false;
+	});
 
-		winDow.bind('resize', function(){
-			var selector = $filter.find('a.active').attr('data-filter');
+	// Isotope Filter 
+	$filter.find('a').click(function () {
+		var selector = $(this).attr('data-filter');
 
-			try {
-				$container.isotope({ 
-					filter	: selector,
-					animationOptions: {
-						duration: 750,
-						easing	: 'linear',
-						queue	: false,
-					}
-				});
-			} catch(err) {
-			}
-			return false;
-		});
-		
-		// Isotope Filter 
-		$filter.find('a').click(function(){
-			var selector = $(this).attr('data-filter');
+		try {
+			$container.isotope({
+				filter: selector,
+				animationOptions: {
+					duration: 750,
+					easing: 'linear',
+					queue: false,
+				}
+			});
+		} catch (err) {
 
-			try {
-				$container.isotope({ 
-					filter	: selector,
-					animationOptions: {
-						duration: 750,
-						easing	: 'linear',
-						queue	: false,
-					}
-				});
-			} catch(err) {
-
-			}
-			return false;
-		});
+		}
+		return false;
+	});
 
 
-	var filterItemA	= $('.filter li a');
+	var filterItemA = $('.filter li a');
 
-		filterItemA.on('click', function(){
-			var $this = $(this);
-			if ( !$this.hasClass('active')) {
-				filterItemA.removeClass('active');
-				$this.addClass('active');
-			}
-		});
+	filterItemA.on('click', function () {
+		var $this = $(this);
+		if (!$this.hasClass('active')) {
+			filterItemA.removeClass('active');
+			$this.addClass('active');
+		}
+	});
 
 	/*-------------------------------------------------*/
 	/* =  smooth scroll in chrome
@@ -116,26 +116,26 @@ $(document).ready(function($) {
 	try {
 		$.browserSelector();
 		// Adds window smooth scroll on chrome.
-		if($("html").hasClass("chrome")) {
+		if ($("html").hasClass("chrome")) {
 			$.smoothScroll();
 		}
-	} catch(err) {
+	} catch (err) {
 
 	}
 
 	/*-------------------------------------------------*/
 	/* =  Testimonial
 	/*-------------------------------------------------*/
-	try{
+	try {
 		var testimUl = $('.testimonial > ul');
 
 		testimUl.quovolver({
-			transitionSpeed:300,
-			autoPlay:true
+			transitionSpeed: 300,
+			autoPlay: true
 		});
-	}catch(err){
+	} catch (err) {
 	}
-	
+
 	/*-------------------------------------------------*/
 	/* =  Animated content
 	/*-------------------------------------------------*/
@@ -146,7 +146,7 @@ $(document).ready(function($) {
 			$('.animated').css('opacity', '0');
 		}
 
-		$('.triggerAnimation').waypoint(function() {
+		$('.triggerAnimation').waypoint(function () {
 			var animation = $(this).attr('data-animate');
 			$(this).css('opacity', '');
 			$(this).addClass("animated " + animation);
@@ -157,28 +157,28 @@ $(document).ready(function($) {
 				triggerOnce: true
 			}
 		);
-	} catch(err) {
+	} catch (err) {
 
 	}
 
 	/* ---------------------------------------------------------------------- */
 	/*	Contact Map
 	/* ---------------------------------------------------------------------- */
-	var contact = {"lat":"51.51152", "lon":"-0.125198"}; //Change a map coordinate here!
+	var contact = { "lat": "51.51152", "lon": "-0.125198" }; //Change a map coordinate here!
 
 	try {
 		var mapContainer = $('.map');
 		mapContainer.gmap3({
 			action: 'addMarker',
 			latLng: [contact.lat, contact.lon],
-			map:{
+			map: {
 				center: [contact.lat, contact.lon],
 				zoom: 17
-				},
 			},
-			{action: 'setOptions', args:[{scrollwheel:false}]}
+		},
+			{ action: 'setOptions', args: [{ scrollwheel: false }] }
 		);
-	} catch(err) {
+	} catch (err) {
 
 	}
 
@@ -195,7 +195,7 @@ $(document).ready(function($) {
 			}
 		});
 
-	} catch(err) {
+	} catch (err) {
 
 	}
 
@@ -204,11 +204,11 @@ $(document).ready(function($) {
 	/*-------------------------------------------------*/
 
 	var slidertestimonial = $('.bxslider');
-	try{		
+	try {
 		slidertestimonial.bxSlider({
 			mode: 'horizontal'
 		});
-	} catch(err) {
+	} catch (err) {
 	}
 
 	/* ---------------------------------------------------------------------- */
@@ -216,7 +216,7 @@ $(document).ready(function($) {
 	/* ---------------------------------------------------------------------- */
 	var clickTab = $('.tab-links li a');
 
-	clickTab.on('click', function(e){
+	clickTab.on('click', function (e) {
 		e.preventDefault();
 
 		var $this = $(this),
@@ -224,7 +224,7 @@ $(document).ready(function($) {
 			tabCont = $('.tab-content-sidebar'),
 			tabContIndex = $(".tab-content-sidebar:eq(" + hisIndex + ")");
 
-		if( !$this.hasClass('active')) {
+		if (!$this.hasClass('active')) {
 
 			clickTab.removeClass('active');
 			$this.addClass('active');
@@ -243,7 +243,7 @@ $(document).ready(function($) {
 		$('.carousel').carousel({
 			interval: false
 		});
-	} catch(err) {
+	} catch (err) {
 
 	}
 
@@ -254,20 +254,20 @@ $(document).ready(function($) {
 	var submitContact = $('#submit_contact'),
 		message = $('#msg');
 
-	submitContact.on('click', function(e){
+	submitContact.on('click', function (e) {
 		e.preventDefault();
 
 		var $this = $(this);
-		
+
 		$.ajax({
 			type: "POST",
 			url: 'contact.php',
 			dataType: 'json',
 			cache: false,
 			data: $('#contact-form').serialize(),
-			success: function(data) {
+			success: function (data) {
 
-				if(data.info !== 'error'){
+				if (data.info !== 'error') {
 					$this.parents('form').find('input[type=text],textarea,select').filter(':visible').val('');
 					message.hide().removeClass('success').removeClass('error').addClass('success').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
 				} else {
