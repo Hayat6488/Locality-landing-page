@@ -37,13 +37,23 @@
 .buy-it {
     padding: 0px 0px !important;
 }
+
+.buy-it img{
+    width: 160px;
+    height: 48px;
+    border: 0;
+    border-radius: 3px;
+}
 .get-free {
     padding: 0px 0px !important;
+    margin-right: 7px !important;
+    border: 0;
+    background: black !important;
 }
 
-#button-img{
-    height: 48px;
+.get-free img{
     width: 160px;
+    height: 48px;
 }
 
 
@@ -60,7 +70,7 @@
 .tp-bgimg {
     background-size: cover !important;
     background-position: center center !important;
-    /* height: 360px !important; */
+    height: 388px !important;
 }
 
 /* .slotslide div {
@@ -564,7 +574,7 @@ a.button-second:hover {
 }
 
 .title-section2 {
-    margin-bottom: 35px;
+    margin-top: 35px;
     text-align: center;
     overflow: hidden;
 }
@@ -2210,5 +2220,8 @@ footer a.footer-logo {
 @media screen and (min-width: 993px){
     .slider-sm{
         display: none;
+    }
+    .slider-lg{
+        margin-top: 86px;
     }
 }
