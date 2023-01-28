@@ -70,7 +70,7 @@
 .tp-bgimg {
     background-size: cover !important;
     background-position: center center !important;
-    height: 388px !important;
+    /* height: 388px !important; */
 }
 
 /* .slotslide div {
