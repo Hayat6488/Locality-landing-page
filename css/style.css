@@ -19,6 +19,10 @@
 -------------------------------------------------*/
 /* Hayat----------------- */
 
+.work-with-us a{
+    color: #FF9E28 !important;
+}
+
 footer img{
     height: 32px;
     width: 32px;
@@ -83,6 +87,7 @@ footer img{
 body{
     background-color: #F5F5F5;
     font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 :root {
