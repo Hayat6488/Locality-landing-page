@@ -19,6 +19,11 @@
 -------------------------------------------------*/
 /* Hayat----------------- */
 
+footer img{
+    height: 32px;
+    width: 32px;
+}
+
 #nav-logo{
     width: 38px;
     height: 38px;
@@ -70,13 +75,7 @@
 .tp-bgimg {
     background-size: cover !important;
     background-position: center center !important;
-    /* height: 388px !important; */
 }
-
-/* .slotslide div {
-    background-size: cover !important;
-    background-position: center center !important;
-} */
 
 
 /* Slider height width ----------------------- */
@@ -182,10 +181,10 @@ header {
     -o-transition: all 0.17s ease-in-out;
 }
 
-.navbar-default .navbar-nav>li>a.active {
+/* .navbar-default .navbar-nav>li>a.active {
     color: #53bc98;
     border-bottom: 4px solid #53bc98;
-}
+} */
 
 .navbar-default .navbar-nav>li>a:hover {
     color: #53bc98;
@@ -584,8 +583,8 @@ a.button-second:hover {
 }
 
 .title-section2 h1 {
-    color: #465765;
-    font-size: 18px;
+    color: #3e3e3e;
+    font-size: 30px;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
@@ -2133,7 +2132,6 @@ footer a.footer-logo {
 .copyright-line {
 
     text-align: right;
-    padding-top: 6px;
 }
 
 .copyright-line span {
@@ -2187,9 +2185,9 @@ footer a.footer-logo {
 .slider-lg{
     display: none;
 }
-.slider-sm{
+/* .slider-sm{
     margin-top: 86px;
-}
+} */
 .slot{
     height: 46px !important;
 }
@@ -2203,9 +2201,9 @@ footer a.footer-logo {
 .slider-lg{
     display: none;
 }
-.slider-sm{
+/* .slider-sm{
     margin-top: 86px;
-}
+} */
 .slot{
     height: 46px !important;
 }
@@ -2220,8 +2218,5 @@ footer a.footer-logo {
 @media screen and (min-width: 993px){
     .slider-sm{
         display: none;
-    }
-    .slider-lg{
-        margin-top: 86px;
     }
 }
