@@ -24,8 +24,8 @@
 }
 
 footer img{
-    height: 32px;
-    width: 32px;
+    height: 40px;
+    width: 40px;
 }
 
 #nav-logo{
@@ -2122,6 +2122,7 @@ ul.depth {
     font-size: 24px;
     font-weight: 700;
     margin-left: 4px;
+    font-family: sans-serif;
 }
 
 footer {
@@ -2133,6 +2134,13 @@ footer {
 footer a.footer-logo {
     display: inline-block;
 }
+
+footer span{
+    font-size: 16px !important;
+}
+
+
+
 
 .copyright-line {
 
